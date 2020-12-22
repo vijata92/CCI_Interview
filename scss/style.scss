@@ -1,0 +1,300 @@
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gotham', sans-serif;
+    color: $primary-color;
+}
+.gradient-band {
+    background: $band-gradient;
+}
+.text-magenta {
+    color: $text-magenta;
+}
+.bg-grey {
+    background-color: $bg-grey;
+}
+.font-weight-medium {
+    font-weight: map-get($font-weight , medium);
+}
+.font-weight-book {
+    font-weight: map-get($font-weight , book);
+}
+.text-underline {
+    text-decoration: underline;
+}
+// .formSubmit-btn {
+//     @include media-lg{
+//         text-align: ;
+//     }
+
+// }
+.btn-magenta {
+    background-color: $text-magenta;
+    color: white;
+    font-weight: map-get($font-weight , medium);
+    font-size: 36px;
+    width: 100%;
+    border-radius: 0;
+    padding: 12px 15px;
+    margin-bottom: 40px;
+    @include media-lg{
+        width: auto;
+        margin: 0 auto 40px;
+        min-width: 377px;
+    }
+}
+.header-menu {
+    padding: 33px 30px 73px;
+    transition: $transition-ease;
+    @include media-lg{
+        padding: 83px 30px 103px;
+    }
+    @include media-xxl{
+        @include media-lg{
+            padding: 83px 142px 103px;
+        }
+    }
+}
+.brand-logo {
+    max-width: 72%;
+    @include media-sm{
+        max-width: 327px;
+    }
+    @include media-xl{
+        max-width: initial;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+.navbar .menu-btn {
+    border: none;
+    color: white;
+    width: 53px;
+    height: 44px;
+    outline: none;
+    
+    .navbar-toggler-btn {
+        @include menuIcon;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            @include menuIcon;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+    }
+}
+.menu-links .nav-link {
+    font-size: 20px;
+    color: white;
+    margin-top: 1rem;
+
+    @include media-lg{
+        margin-top: 0;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+/* Banner section */
+.banner-section {
+    background-image: url("../images/bannerImage.png");
+    height: 768px;
+    padding: 30px;
+    background-position: top 60% right 20%;
+    background-repeat: no-repeat;
+    @include media-lg{
+        height: 1080px;
+        background-position: bottom right 30%;
+        background-size: cover;
+    }
+    &__inner {
+        max-width: 70%;
+        // & > * {
+        //     content: "";
+        //     background: $text-shadow;
+        // }
+        @include media-xl{
+            padding-left: 112px;
+        }
+    }
+    &__title {
+        font-weight: map-get($font-weight , medium);
+        font-size: 38px;
+        padding-bottom: 15px;
+        @include media-sm{
+            font-size: 68px;
+        }
+        @include media-xl{
+            font-size: 94px;
+        }
+        @include media-xxl{
+            font-size: 124px;
+        }
+    }
+    &__description {
+        font-weight: map-get($font-weight , book);
+        font-size: 25px;
+        @include media-xl{
+            font-size: 40px;
+        }
+        @include media-xxl{
+            font-size: 50px;
+        }
+    }
+}
+.banner-bottom-text {
+    font-size: 27px;
+    font-weight: map-get($font-weight , medium);
+    line-height: 1.25;
+    padding: 20px 60px;
+
+    @include media-md{
+        font-size: 32px;
+        font-weight: map-get($font-weight , bold);
+    }
+    @include media-lg{
+        font-size: 38px;
+        padding: 40px 60px;
+    }
+}
+.carousel-container {
+    margin: 61px auto;
+    padding: 0 25px;
+    .carousel-text {
+        font-size: 23px;
+        font-weight: map-get($font-weight , book);
+        padding: 0 35px;
+
+        @include media-lg{
+            font-size: 36px;
+        }
+    }
+    .row {        
+        border-bottom: 1px solid $text-magenta;
+    }
+}
+.carouselSlide {
+    background: url("../images/ipad-skewed-frame.png") no-repeat ;
+    background-size: contain;
+    padding: 10px 10px 20px; 
+    margin: 0 35px;
+    // margin: 61px 0;
+    .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $indicator-inactive;
+        &.active {
+            background-color: $indicator-active;
+        }
+    }
+    .carousel-inner {
+        transform: translate(-41px, -29px) skew(0deg, -2.5deg) scale(0.82);
+        // max-width: 81.75%;
+        border-radius: 10px;
+    }
+    #{&} .carousel-indicators {
+        bottom: -20px;
+    }
+}
+.intergalactic {
+    padding: 0 30px;
+    &-btn {
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    &-title {
+        font-size: 50px;
+        padding-bottom: 40px;
+        @include media-lg{
+            font-size: 60px;
+        }
+    }
+    #{&}-item {
+        background-color: $bg-grey;
+        border: 1px solid #eff0f0;
+        padding: 43px 32px;
+        &__header--title > *{
+            margin: 0;
+        }
+        &__header--title .you-choose {
+            font-size: 30px;
+        }
+        &__header--title h3 {
+            font-size: 54px;
+        }
+        &__body h5 {
+            font-size: 27px;
+        }
+        &__body p {
+            font-size: 25px;
+        }
+    }
+    &-item__header--image {
+        width: 150px;
+        img {
+            max-width: 120px;
+        }
+    }
+}
+.contact-form-header {
+    background-color: $text-magenta;
+    padding: 35px 40px;
+    h3 {
+        font-size: 50px;
+        line-height: 1.25;
+        font-weight: map-get($font-weight , book);
+        @include media-lg{
+            font-size:60px;
+        }
+    }
+    label {
+        font-size: 27px;
+        line-height: 1.25;
+        font-weight: map-get($font-weight , book);
+        @include media-lg{
+            font-size: 44px;
+        }
+    }
+}
+.contact-form-body {
+    background-color: $bg-grey;
+    padding: 55px 50px;
+    input {
+        height: 60px;
+        border-color: #666868;
+        border-radius: 0;
+    }
+    .form-group {
+        margin-bottom: 55px;
+    }
+    .contact-form-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 75px;
+        @include media-lg{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+    }
+}
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+    border-color: $text-magenta;
+}
+.invalid-feedback {
+    color: $text-magenta;
+    font-style: italic;
+}

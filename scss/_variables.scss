@@ -1,0 +1,20 @@
+$textWhite: #fff;
+$primary-color: #58595b;
+$bg-grey: #f4f4f4;
+$band-gradient: linear-gradient(90deg, #962d39,  #672a73);
+$text-shadow: radial-gradient(rgba(164, 67, 14, 0.58), transparent);
+// dist 21 spread 28 size 240px
+$font-weight: (
+    "bold": 700,
+    "medium": 500,
+    "book": 100,
+);
+$media-sm: 576px;
+$media-md: 768px;
+$media-lg: 992px;
+$media-xl: 1200px;
+$media-xxl: 1600px;
+$transition-ease: all 0.3s ease;
+$text-magenta: #672a73;
+$indicator-active: #2b2a27;
+$indicator-inactive: #bfbfbe;

@@ -1,0 +1,447 @@
+@font-face {
+  font-family: "Gotham";
+  font-weight: 700;
+  src: url("../fonts/Gotham-Bold.eot");
+  src: local("Gotham");
+  src: url("../fonts/Gotham-Bold.svg") format("svg");
+  src: url("../fonts/Gotham-Bold.ttf") format("truetype");
+  src: url("../fonts/Gotham-Bold.woff") format("woff");
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/Gotham-BoldItalic.eot");
+  src: local("Gotham");
+  src: url("../fonts/Gotham-BoldItalic.svg") format("svg");
+  src: url("../fonts/Gotham-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/Gotham-BoldItalic.woff") format("woff");
+  src: url("../fonts/Gotham-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 100;
+  src: url("../fonts/Gotham-Book.eot");
+  src: local("Gotham");
+  src: url("../fonts/Gotham-Book.svg") format("svg");
+  src: url("../fonts/Gotham-Book.ttf") format("truetype");
+  src: url("../fonts/Gotham-Book.woff") format("woff");
+  src: url("../fonts/Gotham-Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500;
+  src: url("../fonts/Gotham-Medium.eot");
+  src: local("Gotham");
+  src: url("../fonts/Gotham-Medium.svg") format("svg");
+  src: url("../fonts/Gotham-Medium.ttf") format("truetype");
+  src: url("../fonts/Gotham-Medium.woff") format("woff");
+  src: url("../fonts/Gotham-Medium.woff2") format("woff2");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gotham', sans-serif;
+  color: #58595b;
+}
+
+.gradient-band {
+  background: -webkit-gradient(linear, left top, right top, from(#962d39), to(#672a73));
+  background: linear-gradient(90deg, #962d39, #672a73);
+}
+
+.text-magenta {
+  color: #672a73;
+}
+
+.bg-grey {
+  background-color: #f4f4f4;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-book {
+  font-weight: 100;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.btn-magenta {
+  background-color: #672a73;
+  color: white;
+  font-weight: 500;
+  font-size: 36px;
+  width: 100%;
+  border-radius: 0;
+  padding: 12px 15px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .btn-magenta {
+    width: auto;
+    margin: 0 auto 40px;
+    min-width: 377px;
+  }
+}
+
+.header-menu {
+  padding: 33px 30px 73px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 992px) {
+  .header-menu {
+    padding: 83px 30px 103px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (min-width: 992px) {
+  .header-menu {
+    padding: 83px 142px 103px;
+  }
+}
+
+.brand-logo {
+  max-width: 72%;
+}
+
+@media screen and (min-width: 576px) {
+  .brand-logo {
+    max-width: 327px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .brand-logo {
+    max-width: initial;
+  }
+}
+
+.brand-logo img {
+  max-width: 100%;
+}
+
+.navbar .menu-btn {
+  border: none;
+  color: white;
+  width: 53px;
+  height: 44px;
+  outline: none;
+}
+
+.navbar .menu-btn .navbar-toggler-btn {
+  width: 100%;
+  background: white;
+  height: 5px;
+  border-radius: 50px;
+  display: block;
+}
+
+.navbar .menu-btn .navbar-toggler-btn::after, .navbar .menu-btn .navbar-toggler-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 5px;
+  border-radius: 50px;
+  display: block;
+}
+
+.navbar .menu-btn .navbar-toggler-btn::before {
+  top: 0;
+}
+
+.navbar .menu-btn .navbar-toggler-btn::after {
+  bottom: 0;
+}
+
+.menu-links .nav-link {
+  font-size: 20px;
+  color: white;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-links .nav-link {
+    margin-top: 0;
+  }
+}
+
+.menu-links .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Banner section */
+.banner-section {
+  background-image: url("../images/bannerImage.png");
+  height: 768px;
+  padding: 30px;
+  background-position: top 60% right 20%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-section {
+    height: 1080px;
+    background-position: bottom right 30%;
+    background-size: cover;
+  }
+}
+
+.banner-section__inner {
+  max-width: 70%;
+}
+
+@media screen and (min-width: 1200px) {
+  .banner-section__inner {
+    padding-left: 112px;
+  }
+}
+
+.banner-section__title {
+  font-weight: 500;
+  font-size: 38px;
+  padding-bottom: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .banner-section__title {
+    font-size: 68px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner-section__title {
+    font-size: 94px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner-section__title {
+    font-size: 124px;
+  }
+}
+
+.banner-section__description {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1200px) {
+  .banner-section__description {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner-section__description {
+    font-size: 50px;
+  }
+}
+
+.banner-bottom-text {
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 20px 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-bottom-text {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner-bottom-text {
+    font-size: 38px;
+    padding: 40px 60px;
+  }
+}
+
+.carousel-container {
+  margin: 61px auto;
+  padding: 0 25px;
+}
+
+.carousel-container .carousel-text {
+  font-size: 23px;
+  font-weight: 100;
+  padding: 0 35px;
+}
+
+@media screen and (min-width: 992px) {
+  .carousel-container .carousel-text {
+    font-size: 36px;
+  }
+}
+
+.carousel-container .row {
+  border-bottom: 1px solid #672a73;
+}
+
+.carouselSlide {
+  background: url("../images/ipad-skewed-frame.png") no-repeat;
+  background-size: contain;
+  padding: 10px 10px 20px;
+  margin: 0 35px;
+}
+
+.carouselSlide .carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bfbfbe;
+}
+
+.carouselSlide .carousel-indicators li.active {
+  background-color: #2b2a27;
+}
+
+.carouselSlide .carousel-inner {
+  -webkit-transform: translate(-41px, -29px) skew(0deg, -2.5deg) scale(0.82);
+          transform: translate(-41px, -29px) skew(0deg, -2.5deg) scale(0.82);
+  border-radius: 10px;
+}
+
+.carouselSlide .carouselSlide .carousel-indicators {
+  bottom: -20px;
+}
+
+.intergalactic {
+  padding: 0 30px;
+}
+
+.intergalactic-btn {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.intergalactic-title {
+  font-size: 50px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .intergalactic-title {
+    font-size: 60px;
+  }
+}
+
+.intergalactic .intergalactic-item {
+  background-color: #f4f4f4;
+  border: 1px solid #eff0f0;
+  padding: 43px 32px;
+}
+
+.intergalactic .intergalactic-item__header--title > * {
+  margin: 0;
+}
+
+.intergalactic .intergalactic-item__header--title .you-choose {
+  font-size: 30px;
+}
+
+.intergalactic .intergalactic-item__header--title h3 {
+  font-size: 54px;
+}
+
+.intergalactic .intergalactic-item__body h5 {
+  font-size: 27px;
+}
+
+.intergalactic .intergalactic-item__body p {
+  font-size: 25px;
+}
+
+.intergalactic-item__header--image {
+  width: 150px;
+}
+
+.intergalactic-item__header--image img {
+  max-width: 120px;
+}
+
+.contact-form-header {
+  background-color: #672a73;
+  padding: 35px 40px;
+}
+
+.contact-form-header h3 {
+  font-size: 50px;
+  line-height: 1.25;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form-header h3 {
+    font-size: 60px;
+  }
+}
+
+.contact-form-header label {
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form-header label {
+    font-size: 44px;
+  }
+}
+
+.contact-form-body {
+  background-color: #f4f4f4;
+  padding: 55px 50px;
+}
+
+.contact-form-body input {
+  height: 60px;
+  border-color: #666868;
+  border-radius: 0;
+}
+
+.contact-form-body .form-group {
+  margin-bottom: 55px;
+}
+
+.contact-form-body .contact-form-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-column-gap: 75px;
+          column-gap: 75px;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form-body .contact-form-inner {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  border-color: #672a73;
+}
+
+.invalid-feedback {
+  color: #672a73;
+  font-style: italic;
+}

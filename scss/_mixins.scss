@@ -1,0 +1,33 @@
+@mixin menuIcon {
+    width: 100%;
+    background: white;
+    height: 5px;
+    border-radius: 50px;
+    display: block;
+}
+
+@mixin media-sm {
+    @media screen and (min-width: $media-sm) {
+      @content;
+    }
+  }
+@mixin media-md {
+    @media screen and (min-width: $media-md) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: $media-lg) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: $media-xl) {
+        @content;
+    }
+}
+@mixin media-xxl {
+    @media screen and (min-width: $media-xxl) {
+        @content;
+    }
+}
